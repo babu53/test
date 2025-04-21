@@ -28,7 +28,7 @@ jobs:
     needs: build  # This makes the test job run AFTER build
     steps:
       - name: Checkout code
-         run: echo "this is checkout code for build"
+        run: echo "this is checkout code for build"
 
       - name: Set up Node.js
         run: echo " this is node js"
