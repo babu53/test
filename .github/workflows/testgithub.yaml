@@ -25,6 +25,7 @@ jobs:
 
   test:
     runs-on: self-hosted
+    needs: build
     # needs: build  # This makes the test job run AFTER build
     steps:
       - name: Checkout code
@@ -39,3 +40,20 @@ jobs:
         run: |
          echo " this is install dependeccies...."
          echo "this is secret ${{secrets.name}}"
+
+  aws:
+   runs_on: self-hosted
+   needs: test
+   steps:
+      - name: Check s3 bucket list
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+        aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
+        aws_secret_accesss_key:  ${{secrets.AWS_SECRET_ACCESS_KEY}}
+        aws-region: ${{secrets.AWS_REGION}}
+      - name: list of s3 buckets
+        run: |
+         aws s3 ls
+
+    
+           
