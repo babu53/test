@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: selef-hosted
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         run: echo "checkout code"
