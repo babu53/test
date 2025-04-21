@@ -31,7 +31,9 @@ jobs:
         run: echo "this is checkout code for build"
 
       - name: Set up Node.js
-        run: echo " this is node js"
+        run: |
+         echo " this is node js"
+         echo " this is apple name is : ${{var.my}}"
 
       - name: Install dependencies
         run: |
