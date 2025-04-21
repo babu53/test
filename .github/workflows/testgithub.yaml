@@ -42,7 +42,7 @@ jobs:
          echo "this is secret ${{secrets.name}}"
 
   aws:
-   runs_on: self-hosted
+   runs-on: self-hosted
    needs: test
    steps:
       - name: Check s3 bucket list
