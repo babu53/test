@@ -1,0 +1,11 @@
+name: manual input workflow file
+
+on:
+ push:
+   branches:
+    - master
+jobs:
+ Explore-GitHub-actions-file:
+   runs-on: ubuntu
+   steps:
+   - run: echo "this is test file"
