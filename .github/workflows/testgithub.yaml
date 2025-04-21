@@ -6,6 +6,6 @@ on:
     - master
 jobs:
  Explore-GitHub-actions-file:
-   runs-on: ubuntu
+   runs-on: self-hosted
    steps:
    - run: echo "this is test file"
