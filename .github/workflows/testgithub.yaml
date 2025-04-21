@@ -5,12 +5,7 @@ on:
    branches:
     - master
 jobs:
- 
  Explore-GitHub-actions-file:
   runs-on: self-hosted
-    steps:
-    - run: echo "this is test file"
- test:
-  steps:
-  - run: |
-     echo " this is test"
+   steps:
+   - run: echo "this is test file"
