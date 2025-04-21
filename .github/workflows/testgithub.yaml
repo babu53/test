@@ -1,14 +1,38 @@
-name: manual input workflow file
+name: Build and Test Workflow
 
 on:
- push:
-   branches:
-    - master
+  push:
+    branches:
+      - master
+
 jobs:
- Explore-GitHub-actions-file:
-  runs-on: self-hosted
-  steps:
-    - run: echo "this is test file"
- test:
-  steps:
-   - run: echo " this is test file"
+  build:
+    runs-on: selef-hosted
+    steps:
+      - name: Checkout code
+        run: echo "checkout code"
+
+      - name: Set up Node.js
+        run: |
+         echo "this Node.js setup"
+
+      - name: Install dependencies
+        run: echo " this this install depedencies"
+
+      - name: Build
+        run: |
+         echo " this is build "
+
+  test:
+    runs-on: self-hosted
+    needs: build  # This makes the test job run AFTER build
+    steps:
+      - name: Checkout code
+         echo "this is checkout code for build"
+
+      - name: Set up Node.js
+        run: echo " this is node js"
+
+      - name: Install dependencies
+        run: |
+         echo " this is install dependeccies...."
