@@ -36,4 +36,4 @@ jobs:
       - name: Install dependencies
         run: |
          echo " this is install dependeccies...."
-         echo "${{secrets.name}}"
+         echo "this is secret ${{secrets.name}}"
