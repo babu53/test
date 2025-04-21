@@ -25,7 +25,7 @@ jobs:
 
   test:
     runs-on: self-hosted
-    needs: build  # This makes the test job run AFTER build
+    # needs: build  # This makes the test job run AFTER build
     steps:
       - name: Checkout code
         run: echo "this is checkout code for build"
