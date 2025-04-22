@@ -48,9 +48,9 @@ jobs:
       - name: Check s3 bucket list
         uses: aws-actions/configure-aws-credentials@v4
         with:
-        aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
-        aws_secret_accesss_key:  ${{secrets.AWS_SECRET_ACCESS_KEY}}
-        aws-region: ${{secrets.AWS_REGION}}
+         aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
+         aws_secret_accesss_key:  ${{secrets.AWS_SECRET_ACCESS_KEY}}
+         aws-region: ${{secrets.AWS_REGION}}
       - name: list of s3 buckets
         run: |
          aws s3 ls
