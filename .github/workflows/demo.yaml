@@ -1,0 +1,11 @@
+name: call input file
+on:
+  push:
+   branches:
+    - master
+jobs:
+ Target-workflow-file:
+  steps:
+   uses: .github/workflows/input.yaml@master
+    with:
+     directory: testdemo
