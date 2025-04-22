@@ -5,6 +5,7 @@ on:
     - master
 jobs:
  Target-workflow-file:
+  runs-on: self-hosted
   steps:
   - name: execute file
     uses: babu53/merge/.github/actions/input.yaml@master
