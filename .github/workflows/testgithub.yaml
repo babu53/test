@@ -1,13 +1,14 @@
 name: Build and Test Workflow
 
 on:
-  #push:
-    # branches:
-    #   - master
-  pull_request:
-    types: [opened]
-    branches:
-      - master
+  # #push:
+  #   # branches:
+  #   #   - master
+  # pull_request:
+  #   types: [opened]
+  #   branches:
+  #     - master
+  workflow_dipatch: null
 
 jobs:
   Checkout:
