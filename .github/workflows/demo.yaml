@@ -6,6 +6,6 @@ on:
 jobs:
  Target-workflow-file:
   steps:
-   uses: merge/.github/workflows/input.yaml@master
+   uses: .github/actions/input.yaml@master
    with:
     environment: testdemo
