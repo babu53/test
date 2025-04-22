@@ -20,6 +20,7 @@ jobs:
       - name: Set up Node.js
         run: |
          echo "this Node.js setup"
+         echo "current branch :  ${{ github.ref }}"
 
       - name: Install dependencies
         run: echo " this this install depedencies"
