@@ -7,5 +7,5 @@ jobs:
  Target-workflow-file:
   steps:
    uses: .github/workflows/input.yaml@master
-    with:
+   with:
      directory: testdemo
