@@ -8,4 +8,4 @@ jobs:
   steps:
    uses: .github/workflows/input.yaml@master
    with:
-     environment: testdemo
+    environment: testdemo
