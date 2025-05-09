@@ -15,11 +15,10 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: AWS
     steps:
       - uses: actions/checkout@v3
       - name: Run based on choice
-        shell: bash
         run: |
           if  [[ "${{ github.event.inputs.component }}" = "frontend" ]]; then
             echo "Running frontend build"
