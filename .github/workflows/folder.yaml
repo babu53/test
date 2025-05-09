@@ -24,4 +24,7 @@ jobs:
             echo "Running frontend build"
           else
             echo "Running backend deploy"
+            working-directory: backend
+            test.sh
+
           fi
