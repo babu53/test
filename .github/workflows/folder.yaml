@@ -21,8 +21,9 @@ jobs:
       - name: Run based on choice
 
           if  [[ "${{ github.event.inputs.component }}" = "backend" ]]; then
-            working-directory: backend
-            run: test.sh
+          working-directory: backend
+          run: |
+            test.sh
             echo "Running backend build"
           else
             echo "Running front deploy"
