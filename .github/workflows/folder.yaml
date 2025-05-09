@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run based on choice
         run: |
-          if  ("${{ github.event.inputs.component }}" = "frontend"); then
+          if  [[ "${{ github.event.inputs.component }}" = "frontend" ]]; then
             echo "Running frontend build"
           else
             echo "Running backend deploy"
