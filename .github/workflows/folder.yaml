@@ -1,0 +1,29 @@
+name: Manual Trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      component:
+        description: 'Choose a component to build'
+        required: true
+        default: 'frontend'
+        type: choice
+        options:
+          - frontend
+          - backend
+          - infra
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run based on choice
+        run: |
+          if [[ "${{ github.event.inputs.component }}" == "frontend" ]]; then
+            echo "Running frontend build"
+          elif [[ "${{ github.event.inputs.component }}" == "backend" ]]; then
+            echo "Running backend build"
+          else
+            echo "Running infra deploy"
+          fi
