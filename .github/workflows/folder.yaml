@@ -22,6 +22,9 @@ jobs:
         run: |
           if  [[ "${{ github.event.inputs.component }}" = "frontend" ]]; then
             echo "Running frontend build"
+            cd /home/ubuntu/actions-runner/github-work/test/test/backend
+            echo "now in $(pwd)"
+            test.sh
           else
             echo "Running backend deploy"
           fi
