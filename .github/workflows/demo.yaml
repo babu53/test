@@ -1,8 +1,7 @@
 name: call input file
 on:
   push:
-   branches:
-    - master
+   workflow_dispatch: null
 jobs:
  Target-workflow-file:
   runs-on: self-hosted

@@ -22,8 +22,6 @@ jobs:
         run: |
           if [[ "${{ github.event.inputs.component }}" == "frontend" ]]; then
             echo "Running frontend build"
-          # elif [[ "${{ github.event.inputs.component }}" == "backend" ]]; then
-          #   echo "Running backend build"
           else
             echo "Running backend deploy"
           fi
