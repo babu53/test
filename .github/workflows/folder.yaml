@@ -19,10 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run based on choice
-
-          if: github.event.inputs.component  = "backend"
-          working-directory: backend
-          run: |
-             echo "Running backend build"
-             test.sh
-          
+        run: |
+          if  [[ "${{ github.event.inputs.component }}" = "frontend" ]]; then
+            echo "Running frontend build"
+          else
+            echo "Running backend deploy"
+          fi
