@@ -24,7 +24,7 @@ jobs:
             echo "Running frontend build"
             cd /home/ubuntu/actions-runner/github-work/test/test/backend
             echo "now in $(pwd)"
-            test.sh
+            sh test.sh
           else
             echo "Running backend deploy"
           fi
